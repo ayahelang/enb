@@ -57,13 +57,13 @@ function toggleMenu() {
 
     const nav = document.getElementById("navMenu")
 
-    if (nav.style.display === "flex") {
+    if (nav.classList.contains("active")) {
 
-        nav.style.display = "none"
+        nav.classList.remove("active")
 
     } else {
 
-        nav.style.display = "flex"
+        nav.classList.add("active")
 
     }
 

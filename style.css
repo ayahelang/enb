@@ -51,17 +51,24 @@ nav a {
 .hero h1 {
   font-size: 52px;
   margin-bottom: 20px;
+  line-height: 1.2;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: keep-all;
 }
 
 .hero p {
   color: #cbd5f5;
 }
-
-.hero-buttons {
+.btn .hero-buttons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  margin-top: 30px;
 }
 
 .btn {
@@ -73,13 +80,28 @@ nav a {
   font-weight: 600;
 }
 
+.btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+}
+
 .btn-outline {
   border: 2px solid #38bdf8;
   padding: 14px 30px;
   border-radius: 8px;
-  margin-left: 15px;
   text-decoration: none;
   color: #38bdf8;
+}
+
+.btn-outline:hover {
+  background: #38bdf8;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.btn,
+.btn-outline {
+  transition: 0.25s;
 }
 
 h2 {
@@ -164,7 +186,8 @@ footer {
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 1.25;
   }
 
   .hero {
@@ -210,7 +233,7 @@ footer {
   section {
     padding: 40px 20px;
   }
-  
+
   .card {
     padding: 18px;
   }
@@ -231,4 +254,24 @@ footer {
 
 nav.active {
   display: flex;
+}
+
+.powered {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.powered a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.powered a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 1px;
 }

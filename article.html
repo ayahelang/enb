@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Experiment</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">← Back</a>
+    </header>
+
+    <div class="article">
+      <h1 id="title"></h1>
+
+      <div id="video"></div>
+
+      <p id="content"></p>
+    </div>
+
+    <script>
+      async function loadArticle() {
+        const params = new URLSearchParams(window.location.search);
+
+        const id = params.get("id");
+
+        const res = await fetch("data/experiments.json");
+
+        const data = await res.json();
+
+        const exp = data.find((e) => e.id === id);
+
+        document.getElementById("title").innerText = exp.title;
+
+        document.getElementById("content").innerText = exp.article;
+
+        document.getElementById("video").innerHTML =
+          `<iframe src="${exp.video}" width="100%" height="400"></iframe>`;
+      }
+
+      loadArticle();
+    </script>
+  </body>
+</html>

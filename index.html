@@ -6,6 +6,11 @@
 
     <title>EnB Tech Lab</title>
 
+    <meta
+      name="description"
+      content="Real tests of electronics and tools by EnB Tech Lab"
+    />
+
     <link rel="stylesheet" href="style.css" />
 
     <link
@@ -15,52 +20,38 @@
   </head>
 
   <body>
-    <header>
+    <header id="header">
       <div class="logo">ENB TECH LAB</div>
 
       <nav>
         <a href="#experiments">Experiments</a>
         <a href="#tools">Tools</a>
-        <a href="#learn">Learn</a>
         <a href="#videos">Videos</a>
+        <a href="#learn">Learn</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="hero-text">
-        <h1>Testing Electronics & Tools</h1>
+      <div class="hero-content">
+        <h1>Electronics & Tools Testing Lab</h1>
 
         <p>
-          Real experiments on electronics and tools.<br />
+          Real experiments on electronics & tools.<br />
           Mengujii electronics & tools secara teknis.
         </p>
 
-        <button onclick="scrollToExperiments()">Latest Experiments</button>
+        <div class="hero-buttons">
+          <a href="#experiments" class="btn">Latest Experiments</a>
+
+          <a href="#tools" class="btn-outline">Recommended Tools</a>
+        </div>
       </div>
     </section>
 
     <section id="experiments">
       <h2>Latest Experiments</h2>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Power Bank 50rb Test</h3>
-
-          <p>Apakah kapasitasnya benar?</p>
-        </div>
-
-        <div class="card">
-          <h3>Fake Charger Investigation</h3>
-
-          <p>Charger murah ini ternyata...</p>
-        </div>
-
-        <div class="card">
-          <h3>Multimeter Cheap Test</h3>
-
-          <p>Akurat atau tidak?</p>
-        </div>
-      </div>
+      <div id="experimentsGrid" class="grid"></div>
     </section>
 
     <section id="tools">
@@ -72,24 +63,34 @@
 
           <p>Small but powerful.</p>
 
-          <a href="#">See Tool</a>
+          <a href="#" class="toolbtn">See Tool</a>
         </div>
 
         <div class="card">
-          <h3>Affordable Multimeter</h3>
+          <h3>Budget Multimeter</h3>
 
-          <p>Good for home electronics.</p>
+          <p>Accurate enough for home lab.</p>
 
-          <a href="#">See Tool</a>
+          <a href="#" class="toolbtn">See Tool</a>
         </div>
 
         <div class="card">
           <h3>Safe Power Strip</h3>
 
-          <p>Tested overload protection.</p>
+          <p>Overload protection tested.</p>
 
-          <a href="#">See Tool</a>
+          <a href="#" class="toolbtn">See Tool</a>
         </div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2>Latest YouTube</h2>
+
+      <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/YOURVIDEOID"></iframe>
+
+        <iframe src="https://www.youtube.com/embed/YOURVIDEOID"></iframe>
       </div>
     </section>
 
@@ -102,27 +103,12 @@
         </div>
 
         <div class="card">
-          <h3>How To Check Voltage</h3>
+          <h3>How To Check Voltage Safely</h3>
         </div>
 
         <div class="card">
-          <h3>3 Tools Every Home Needs</h3>
+          <h3>3 Tools Every Home Should Have</h3>
         </div>
-      </div>
-    </section>
-
-    <section id="videos">
-      <h2>Latest Videos</h2>
-
-      <div class="video">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/YOURVIDEOID"
-          frameborder="0"
-          allowfullscreen
-        >
-        </iframe>
       </div>
     </section>
 

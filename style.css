@@ -45,14 +45,26 @@ nav a {
 
   text-align: center;
 
-  background: linear-gradient(#020617, #0f172a);
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(56, 189, 248, 0.12) 0%,
+      rgba(2, 6, 23, 0) 60%
+    ),
+    linear-gradient(#020617, #0f172a);
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+  animation: fadeUp 0.8s ease;
 }
 
 .hero h1 {
   font-size: 52px;
   margin-bottom: 20px;
   line-height: 1.2;
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   word-break: keep-all;
@@ -60,12 +72,15 @@ nav a {
 
 .hero p {
   color: #cbd5f5;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
-.btn .hero-buttons {
+
+.hero-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
   flex-wrap: wrap;
 
   margin-top: 30px;
@@ -91,12 +106,15 @@ nav a {
   border-radius: 8px;
   text-decoration: none;
   color: #38bdf8;
+
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
 }
 
 .btn-outline:hover {
   background: #38bdf8;
   color: black;
   transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
 }
 
 .btn,
@@ -121,20 +139,19 @@ h2 {
   background: #1e293b;
   padding: 25px;
   border-radius: 12px;
+  transition: all 0.35s ease;
+}
 
-  transition: 0.3s;
+.card:hover {
+  transform: translateY(-8px);
+  background: #334155;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .card img {
   width: 100%;
   border-radius: 8px;
-
   margin-bottom: 15px;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  background: #334155;
 }
 
 .toolbtn {
@@ -188,6 +205,7 @@ footer {
   .hero h1 {
     font-size: 30px;
     line-height: 1.25;
+    max-width: 300px;
   }
 
   .hero {
@@ -274,4 +292,51 @@ nav.active {
 .logo {
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.btn {
+  background: #38bdf8;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.8);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-indicator {
+  margin-top: 40px;
+  font-size: 22px;
+  opacity: 0.6;
+
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }

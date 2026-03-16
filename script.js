@@ -68,3 +68,31 @@ function toggleMenu() {
     }
 
 }
+
+async function loadYoutubeVideos() {
+
+    const videos = [
+        "https://www.youtube.com/embed/YOURVIDEOID",
+        "https://www.youtube.com/embed/YOURVIDEOID"
+    ]
+
+    const container = document.querySelector(".video-grid")
+
+    if (!container) return
+
+    container.innerHTML = ""
+
+    videos.forEach(v => {
+
+        const iframe = document.createElement("iframe")
+
+        iframe.src = v
+
+        container.appendChild(iframe)
+
+    })
+
+}
+
+loadYoutubeVideos()
+

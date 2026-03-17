@@ -2,17 +2,19 @@
     {
         "id": "powerbank50",
         "title": "Power Bank 50rb Real Capacity Test",
-        "description": "Apakah power bank murah benar-benar 20000mAh?",
-        "video": "https://www.youtube.com/embed/YOURVIDEOID",
-        "image": "images/powerbank.jpg",
-        "article": "Saya menguji power bank murah untuk melihat kapasitas sebenarnya menggunakan multimeter dan USB tester."
+        "description": "Testing cheap power bank capacity",
+        "video": "https://www.youtube.com/embed/VIDEOID",
+        "image": "experiments/images/powerbank.jpg",
+        "category": "battery",
+        "date": "2026-03-16"
     },
     {
         "id": "fakecharger",
         "title": "Fake Charger Investigation",
         "description": "Charger murah ini ternyata berbahaya.",
         "video": "https://www.youtube.com/embed/YOURVIDEOID",
-        "image": "images/charger.jpg",
-        "article": "Charger murah sering memiliki komponen yang tidak aman. Saya membongkar dan menjelaskan isi di dalamnya."
+        "image": "experiments/images/charger.jpg",
+        "category": "charger",
+        "date": "2026-03-17"
     }
 ]

@@ -1,14 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".card")
-    cards.forEach(card => {
-        card.addEventListener("mouseenter", () => {
-            card.style.boxShadow = "0 10px 30px rgba(0,0,0,0.4)"
-        })
-        card.addEventListener("mouseleave", () => {
-            card.style.boxShadow = "none"
-        })
-    })
+let currentCategory = "all"
 
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.boxShadow = "0 10px 30px rgba(0,0,0,0.4)"
+    })
+    card.addEventListener("mouseleave", () => {
+        card.style.boxShadow = "none"
+    })
 })
 
 async function loadExperiments() {
@@ -98,3 +96,72 @@ topBtn.addEventListener("click", () => {
         behavior: "smooth"
     })
 })
+
+let experimentsData = []
+
+async function loadExperiments() {
+
+    const res = await fetch("data/experiments.json")
+    const data = await res.json()
+
+    experimentsData = data
+
+    renderExperiments(data)
+
+}
+
+function renderExperiments(data) {
+    const container = document.getElementById("experimentsGrid")
+    container.innerHTML = ""
+    // SORT TERBARU
+    data.sort((a, b) => new Date(b.date) - new Date(a.date))
+    data.forEach(exp => {
+        const card = document.createElement("div")
+        card.className = "card"
+        card.innerHTML = `
+    <img src="${exp.image}">
+    <h3>${exp.title}</h3>
+    <p>${exp.description}</p>
+    <a href="article.html?id=${exp.id}" class="toolbtn">
+    Read Experiment
+    </a>
+    `
+        container.appendChild(card)
+    })
+}
+
+loadExperiments()
+
+const searchInput = document.getElementById("searchInput")
+if (searchInput) {
+    searchInput.addEventListener("input", applyFilters)
+}
+
+function filterCategory(category, event) {
+    currentCategory = category
+    document.querySelectorAll(".filters button").forEach(btn => {
+        btn.classList.remove("active")
+    })
+    event.target.classList.add("active")
+    applyFilters()
+}
+
+function applyFilters() {
+    let filtered = experimentsData
+    // FILTER CATEGORY
+    if (currentCategory !== "all") {
+        filtered = filtered.filter(exp =>
+            exp.category === currentCategory
+        )
+    }
+    // FILTER SEARCH
+    const keyword = document.getElementById("searchInput")?.value.toLowerCase() || ""
+    if (keyword) {
+        filtered = filtered.filter(exp =>
+            exp.title.toLowerCase().includes(keyword) ||
+            exp.description.toLowerCase().includes(keyword)
+        )
+    }
+    renderExperiments(filtered)
+}
+

@@ -50,6 +50,18 @@
           Mengujii electronics & tools secara teknis.
         </p>
 
+        <div class="filters">
+            <button onclick="filterCategory('all', event)">All</button>
+            <button onclick="filterCategory('battery', event)">Battery</button>
+            <button onclick="filterCategory('charger', event)">Charger</button>
+        </div>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search experiments..."
+        />
+
         <div class="hero-buttons">
           <a href="#experiments" class="btn">Latest Experiments</a>
 

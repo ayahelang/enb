@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Mini Electric Screwdriver",
+        "price": "Rp70.000",
+        "rating": "4.5",
+        "image": "tools/images/screwdriver.jpg",
+        "link": "https://affiliate-link"
+    },
+    {
+        "name": "Digital Multimeter",
+        "price": "Rp90.000",
+        "rating": "4.2",
+        "image": "tools/images/multimeter.jpg",
+        "link": "https://affiliate-link"
+    }
+]

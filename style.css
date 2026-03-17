@@ -407,9 +407,56 @@ section {
   cursor: pointer;
   display: none;
   box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-  transition:.3s;
+  transition: 0.3s;
 }
 
 #topBtn:hover {
   background: #0ea5e9;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border: none;
+  background: #020617;
+  color: white;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.filters button {
+  background: #020617;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filters button:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+.filters button.active {
+  background: #38bdf8;
+  color: black;
 }

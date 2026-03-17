@@ -199,6 +199,12 @@ h2 {
   gap: 30px;
 }
 
+.video-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
 iframe {
   width: 100%;
   width: 100%;
@@ -459,4 +465,29 @@ section {
 .filters button.active {
   background: #38bdf8;
   color: black;
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+
+.status::before {
+  content: "● ";
+  color: #22c55e;
+
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }

@@ -1,35 +1,22 @@
-let currentCategory = "all"
-
-cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-        card.style.boxShadow = "0 10px 30px rgba(0,0,0,0.4)"
+document.addEventListener("DOMContentLoaded", () => {
+    let currentCategory = "all"
+    const topBtn = document.getElementById("topBtn")
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > window.innerHeight / 2) {
+            topBtn.style.display = "block"
+        } else {
+            topBtn.style.display = "none"
+        }
     })
-    card.addEventListener("mouseleave", () => {
-        card.style.boxShadow = "none"
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
     })
+    // semua function lain tetap di bawah sini...
+    let currentCategory = "all"
 })
-
-async function loadExperiments() {
-    const res = await fetch("data/experiments.json")
-    const data = await res.json()
-    const container = document.getElementById("experimentsGrid")
-    if (!container) return
-    data.forEach(exp => {
-        const card = document.createElement("div")
-        card.className = "card"
-        card.innerHTML = `
-    <img src="${exp.image}">
-    <h3>${exp.title}</h3>
-    <p>${exp.description}</p>
-    <a href="article.html?id=${exp.id}" class="toolbtn">
-    Read Experiment
-    </a>
-    `
-        container.appendChild(card)
-    })
-}
-
-loadExperiments()
 
 function toggleMenu() {
     const nav = document.getElementById("navMenu")
@@ -42,16 +29,26 @@ function toggleMenu() {
 
 async function loadYoutubeVideos() {
     const videos = [
-        "https://www.youtube.com/embed/YOURVIDEOID",
-        "https://www.youtube.com/embed/YOURVIDEOID"
+        {
+            id: "VIDEO_ID_1",
+            title: "Power Bank Test"
+        },
+        {
+            id: "VIDEO_ID_2",
+            title: "Fake Charger"
+        }
     ]
     const container = document.querySelector(".video-grid")
     if (!container) return
     container.innerHTML = ""
     videos.forEach(v => {
-        const iframe = document.createElement("iframe")
-        iframe.src = v
-        container.appendChild(iframe)
+        const div = document.createElement("div")
+        div.className = "video-card"
+        div.innerHTML = `
+    <iframe src="https://www.youtube.com/embed/${v.id}"></iframe>
+    <p>${v.title}</p>
+    `
+        container.appendChild(div)
     })
 }
 
@@ -100,14 +97,10 @@ topBtn.addEventListener("click", () => {
 let experimentsData = []
 
 async function loadExperiments() {
-
     const res = await fetch("data/experiments.json")
     const data = await res.json()
-
     experimentsData = data
-
     renderExperiments(data)
-
 }
 
 function renderExperiments(data) {

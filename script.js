@@ -29,22 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function loadYoutubeVideos() {
-        const videos = [
-            { id: "VIDEO_ID_1", title: "Power Bank Test" },
-            { id: "VIDEO_ID_2", title: "Fake Charger" },
-        ];
-
+        const res = await fetch("data/experiments.json");
+        const data = await res.json();
         const container = document.querySelector(".video-grid");
         if (!container) return;
         container.innerHTML = "";
-
-        videos.forEach((v) => {
+        data.slice(0, 2).forEach((exp) => {
             const div = document.createElement("div");
             div.className = "video-card";
             div.innerHTML = `
-          <iframe src="https://www.youtube.com/embed/${v.id}"></iframe>
-          <p>${v.title}</p>
-        `;
+            <iframe src="${exp.video}"></iframe>
+            <p>${exp.title}</p>
+            `;
             container.appendChild(div);
         });
     }

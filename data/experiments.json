@@ -1,24 +1,90 @@
 [
     {
         "id": "powerbank50",
+        "slug": "power-bank-50rb-real-test",
         "title": "Power Bank 50rb Real Capacity Test",
-        "description": "Testing cheap power bank capacity",
+        "description": "Testing cheap power bank capacity in real conditions.",
         "article": "Power bank murah ini diuji kapasitas aslinya...",
-        "keywords": "power bank murah, test power bank, electronics test",
-        "video": "https://www.youtube.com/embed/VIDEOID",
+        "keywords": [
+            "power bank murah",
+            "test power bank"
+        ],
+        "video": "https://www.youtube.com/embed/O7HR2vCqnKE",
         "image": "experiments/images/powerbank.jpg",
         "category": "battery",
+        "featured": true,
         "date": "2026-03-16"
     },
     {
         "id": "fakecharger",
+        "slug": "fake-charger-investigation",
         "title": "Fake Charger Investigation",
-        "description": "Charger murah ini ternyata berbahaya.",
-        "article": "Charger murah ini ternyata berbahaya.",
-        "keywords": "fake charger, dangerous charger, electronics test",
-        "video": "https://www.youtube.com/embed/YOURVIDEOID",
+        "description": "Charger murah ini ternyata berbahaya dan tidak sesuai standar keamanan.",
+        "article": "Dalam eksperimen ini, charger murah dibongkar dan dianalisis. Hasilnya menunjukkan potensi bahaya seperti overheating dan komponen berkualitas rendah.",
+        "keywords": [
+            "fake charger",
+            "dangerous charger",
+            "electronics teardown",
+            "charger test"
+        ],
+        "video": "https://www.youtube.com/embed/xyz456ABC",
         "image": "experiments/images/charger.jpg",
         "category": "charger",
+        "featured": false,
         "date": "2026-03-17"
+    },
+    {
+        "id": "cheapmultimeter",
+        "slug": "cheap-multimeter-accuracy-test",
+        "title": "Cheap Multimeter Accuracy Test",
+        "description": "Apakah multimeter murah akurat untuk penggunaan sehari-hari?",
+        "article": "Multimeter murah diuji akurasi tegangan dan resistansi. Hasilnya cukup mengejutkan karena beberapa pembacaan melenceng cukup jauh.",
+        "keywords": [
+            "multimeter murah",
+            "alat ukur listrik",
+            "test multimeter",
+            "electronics tools"
+        ],
+        "video": "https://www.youtube.com/embed/multi789TEST",
+        "image": "experiments/images/multimeter.jpg",
+        "category": "tools",
+        "featured": false,
+        "date": "2026-03-18"
+    },
+    {
+        "id": "usbtester",
+        "slug": "usb-tester-real-usage",
+        "title": "USB Tester Real Usage Test",
+        "description": "Menguji akurasi USB tester dalam kondisi nyata.",
+        "article": "USB tester digunakan untuk mengukur arus dan tegangan pada berbagai perangkat. Hasilnya menunjukkan akurasi cukup baik untuk harga murah.",
+        "keywords": [
+            "usb tester",
+            "arus listrik",
+            "voltage test",
+            "electronics test"
+        ],
+        "video": "https://www.youtube.com/embed/usbtest456",
+        "image": "experiments/images/usbtester.jpg",
+        "category": "tools",
+        "featured": false,
+        "date": "2026-03-19"
+    },
+    {
+        "id": "cheapcable",
+        "slug": "cheap-cable-durability-test",
+        "title": "Cheap Cable Durability Test",
+        "description": "Apakah kabel murah tahan lama atau cepat rusak?",
+        "article": "Kabel murah diuji dengan bending dan penggunaan intensif. Banyak kabel menunjukkan kerusakan dalam waktu singkat.",
+        "keywords": [
+            "kabel murah",
+            "durability test",
+            "charging cable test",
+            "electronics test"
+        ],
+        "video": "https://www.youtube.com/embed/cable123test",
+        "image": "experiments/images/cable.jpg",
+        "category": "charger",
+        "featured": false,
+        "date": "2026-03-20"
     }
 ]

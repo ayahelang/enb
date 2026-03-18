@@ -16,6 +16,7 @@
       <h1 id="title"></h1>
       <div id="video"></div>
       <p id="content"></p>
+      <div id="related"></div>
     </div>
     <script>
       async function loadArticle() {
@@ -25,11 +26,27 @@
         const data = await res.json();
         const exp = data.find((e) => e.id === id);
         document.getElementById("title").innerText = exp.title;
-        document.getElementById("content").innerText = exp.article || generateArticle(exp);
+        document.getElementById("content").innerText =
+          exp.article || generateArticle(exp);
         document.getElementById("video").innerHTML =
           `<iframe src="${exp.video}" width="100%" height="400"></iframe>`;
       }
       loadArticle();
+
+      document.title = exp.title
+      document.getElementById("metaDesc").setAttribute("content", exp.description)
+      document.getElementById("metaKeywords").setAttribute("content", exp.keywords)
+      document.getElementById("ogTitle").setAttribute("content", exp.title)
+      document.getElementById("ogDesc").setAttribute("content", exp.description)
+      function showRelated(data, currentId){
+        const related = data.filter(e => e.id !== currentId).slice(0,3)
+        const container = document.getElementById("related")
+        container.innerHTML = "<h3>Related Experiments</h3>"
+        related.forEach(r=>{
+          container.innerHTML += `<a href="article.html?id=${r.id}">
+          ${r.title}</a><br>`
+        })
+      }
     </script>
   </body>
 </html>

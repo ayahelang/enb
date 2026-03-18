@@ -6,6 +6,7 @@
     <title>Experiment</title>
     <meta name="description" id="metaDesc" />
     <meta name="keywords" id="metaKeywords" />
+    <script type="application/ld+json" id="schema"></script>
   </head>
 
   <body>
@@ -47,6 +48,33 @@
 
         // ✅ related
         showRelated(data, id);
+        // const schema = {
+        //   "@context": "https://schema.org",
+        //   "@type": "Article",
+        //   headline: exp.title,
+        //   description: exp.description,
+        //   image: exp.image,
+        //   author: {
+        //     "@type": "Organization",
+        //     name: "EnB Tech Lab",
+        //   },
+        //   publisher: {
+        //     "@type": "Organization",
+        //     name: "EnB Tech Lab",
+        //   },
+        //   datePublished: exp.date,
+        // };
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          name: exp.title,
+          description: exp.description,
+          thumbnailUrl: exp.image,
+          uploadDate: exp.date,
+          embedUrl: exp.video,
+        };
+
+        document.getElementById("schema").textContent = JSON.stringify(schema);
       }
 
       loadArticle();

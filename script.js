@@ -76,13 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadTools()
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > window.innerHeight / 2) {
-            topBtn.style.display = "block"
-        } else {
-            topBtn.style.display = "none"
-        }
-    })
+    // window.addEventListener("scroll", () => {
+    //     if (window.scrollY > window.innerHeight / 2) {
+    //         topBtn.style.display = "block"
+    //     } else {
+    //         topBtn.style.display = "none"
+    //     }
+    // })
 
     topBtn.addEventListener("click", () => {
         window.scrollTo({

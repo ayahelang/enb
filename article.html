@@ -22,30 +22,59 @@
       async function loadArticle() {
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
+
         const res = await fetch("data/experiments.json");
         const data = await res.json();
+
         const exp = data.find((e) => e.id === id);
+
         document.getElementById("title").innerText = exp.title;
+
         document.getElementById("content").innerText =
           exp.article || generateArticle(exp);
+
         document.getElementById("video").innerHTML =
           `<iframe src="${exp.video}" width="100%" height="400"></iframe>`;
+
+        // ✅ SEO (dipindah ke sini)
+        document.title = exp.title;
+        document
+          .getElementById("metaDesc")
+          .setAttribute("content", exp.description);
+        document
+          .getElementById("metaKeywords")
+          .setAttribute("content", exp.keywords);
+
+        // ✅ related
+        showRelated(data, id);
       }
+
       loadArticle();
 
-      document.title = exp.title
-      document.getElementById("metaDesc").setAttribute("content", exp.description)
-      document.getElementById("metaKeywords").setAttribute("content", exp.keywords)
-      document.getElementById("ogTitle").setAttribute("content", exp.title)
-      document.getElementById("ogDesc").setAttribute("content", exp.description)
-      function showRelated(data, currentId){
-        const related = data.filter(e => e.id !== currentId).slice(0,3)
-        const container = document.getElementById("related")
-        container.innerHTML = "<h3>Related Experiments</h3>"
-        related.forEach(r=>{
+      // document
+      //   .getElementById("metaDesc")
+      //   .setAttribute("content", exp.description);
+      // document
+      //   .getElementById("metaKeywords")
+      //   .setAttribute("content", exp.keywords);
+      // document.getElementById("ogTitle").setAttribute("content", exp.title);
+      // document
+      //   .getElementById("ogDesc")
+      //   .setAttribute("content", exp.description);
+      function showRelated(data, currentId) {
+        const related = data.filter((e) => e.id !== currentId).slice(0, 3);
+        const container = document.getElementById("related");
+        container.innerHTML = "<h3>Related Experiments</h3>";
+        related.forEach((r) => {
           container.innerHTML += `<a href="article.html?id=${r.id}">
-          ${r.title}</a><br>`
-        })
+          ${r.title}</a><br>`;
+        });
+      }
+
+      function generateArticle(exp) {
+        return `${exp.title}
+        Eksperimen ini membahas: ${exp.description}
+        Simak video di atas untuk hasil lengkap.`;
       }
     </script>
   </body>

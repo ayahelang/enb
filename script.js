@@ -164,4 +164,11 @@ document.addEventListener("DOMContentLoaded", () => {
         Simak video lengkap di atas untuk melihat hasil real test.
         `
     }
+    document.title = exp.title
+
+    document.getElementById("metaDesc").setAttribute("content", exp.description)
+    document.getElementById("metaKeywords").setAttribute("content", exp.keywords)
+
+    document.getElementById("ogTitle").setAttribute("content", exp.title)
+    document.getElementById("ogDesc").setAttribute("content", exp.description)
 })

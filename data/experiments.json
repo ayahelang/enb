@@ -28,7 +28,7 @@
             "charger test"
         ],
         "video": "https://www.youtube.com/embed/xyz456ABC",
-        "image": "experiments/images/charger.jpg",
+        "image": "experiments/images/charger.png",
         "category": "charger",
         "featured": false,
         "date": "2026-03-17"
@@ -46,7 +46,7 @@
             "electronics tools"
         ],
         "video": "https://www.youtube.com/embed/multi789TEST",
-        "image": "experiments/images/multimeter.jpg",
+        "image": "experiments/images/multimeter.png",
         "category": "tools",
         "featured": false,
         "date": "2026-03-18"
@@ -64,7 +64,7 @@
             "electronics test"
         ],
         "video": "https://www.youtube.com/embed/usbtest456",
-        "image": "experiments/images/usbtester.jpg",
+        "image": "experiments/images/usbtester.png",
         "category": "tools",
         "featured": false,
         "date": "2026-03-19"
@@ -82,7 +82,7 @@
             "electronics test"
         ],
         "video": "https://www.youtube.com/embed/cable123test",
-        "image": "experiments/images/cable.jpg",
+        "image": "experiments/images/cable.png",
         "category": "charger",
         "featured": false,
         "date": "2026-03-20"

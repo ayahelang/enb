@@ -495,3 +495,27 @@ section {
     opacity: 0.3;
   }
 }
+
+.social-links {
+  margin-top: 15px;
+
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.social-links a:hover {
+  background: #38bdf8;
+  color: black;
+}

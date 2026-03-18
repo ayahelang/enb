@@ -1,26 +1,20 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>EnB Tech Lab</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>EnB Tech Lab</title>
-
     <meta
       name="description"
       content="Real tests of electronics and tools by EnB Tech Lab"
     />
-
     <link rel="stylesheet" href="style.css" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-
     <meta name="robots" content="index, follow" />
     <meta name="author" content="EnB Tech Lab" />
-
     <meta property="og:title" content="EnB Tech Lab" />
     <meta property="og:description" content="Electronics & tools testing lab" />
     <meta property="og:type" content="website" />
@@ -29,9 +23,7 @@
   <body>
     <header id="header">
       <div class="logo">ENB TECH LAB</div>
-
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
       <nav id="navMenu">
         <a href="#">Home</a>
         <a href="#experiments">Experiments</a>
@@ -44,86 +36,67 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Electronics & Tools Testing Lab</h1>
-
         <p>
           Real experiments on electronics & tools.<br />
           Mengujii electronics & tools secara teknis.
         </p>
-
         <div class="filters">
           <button onclick="filterCategory('all', event)">All</button>
           <button onclick="filterCategory('battery', event)">Battery</button>
           <button onclick="filterCategory('charger', event)">Charger</button>
         </div>
-
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search experiments..."
-        />
-
+        <input type="text" id="searchInput" placeholder="Search experiments..."/>
         <div class="hero-buttons">
           <a href="#experiments" class="btn">Latest Experiments</a>
-
           <a href="#tools" class="btn-outline">Recommended Tools</a>
         </div>
-
         <div class="scroll-indicator">↓</div>
         <p class="status">Live Tech Lab • Updated Daily</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@amateursreleased" target="_blank">YouTube</a>
+          <a href="https://www.tiktok.com/@enb.electronicsntools" target="_blank">TikTok</a>
+          <a href="https://www.instagram.com/jameswhat.sgbva/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/teddymulyana.sgbva/" target="_blank">Facebook</a>
+        </div>
       </div>
     </section>
 
     <section class="lab-highlights">
       <div class="highlight">
         <h3>Real Testing</h3>
-
         <p>We test electronics and tools in real conditions.</p>
       </div>
-
       <div class="highlight">
         <h3>Inside Investigation</h3>
-
         <p>Cheap electronics teardown and analysis.</p>
       </div>
-
       <div class="highlight">
         <h3>Tools Recommendation</h3>
-
         <p>Affordable tools that actually work.</p>
       </div>
     </section>
 
     <section id="experiments">
       <h2>Latest Experiments</h2>
-
       <div id="experimentsGrid" class="grid"></div>
     </section>
 
     <section id="tools">
       <h2>Recommended Tools</h2>
-
       <div class="grid">
         <div class="card">
           <h3>Mini Electric Screwdriver</h3>
-
           <p>Small but powerful.</p>
-
           <a href="#" class="toolbtn">See Tool</a>
         </div>
-
         <div class="card">
           <h3>Budget Multimeter</h3>
-
           <p>Accurate enough for home lab.</p>
-
           <a href="#" class="toolbtn">See Tool</a>
         </div>
-
         <div class="card">
           <h3>Safe Power Strip</h3>
-
           <p>Overload protection tested.</p>
-
           <a href="#" class="toolbtn">See Tool</a>
         </div>
       </div>
@@ -134,14 +107,12 @@
 
       <div class="video-grid">
         <iframe src="https://www.youtube.com/embed/YOURVIDEOID"></iframe>
-
         <iframe src="https://www.youtube.com/embed/YOURVIDEOID"></iframe>
       </div>
     </section>
 
     <section id="tiktok">
       <h2>Latest TikTok Experiments</h2>
-
       <div class="tiktok-grid">
         <blockquote
           class="tiktok-embed"
@@ -154,16 +125,13 @@
 
     <section id="learn">
       <h2>Learn Electronics</h2>
-
       <div class="grid">
         <div class="card">
           <h3>Why Charger Cables Break</h3>
         </div>
-
         <div class="card">
           <h3>How To Check Voltage Safely</h3>
         </div>
-
         <div class="card">
           <h3>3 Tools Every Home Should Have</h3>
         </div>

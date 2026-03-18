@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     let currentCategory = "all"
     const topBtn = document.getElementById("topBtn")
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > window.innerHeight / 2) {
-            topBtn.style.display = "block"
-        } else {
-            topBtn.style.display = "none"
-        }
-    })
-    topBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+    if (topBtn) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 150) {
+                topBtn.style.display = "block"
+            } else {
+                topBtn.style.display = "none"
+            }
         })
-    })
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+    }
     // semua function lain tetap di bawah sini...
-
-
     function toggleMenu() {
         const nav = document.getElementById("navMenu")
         if (nav.classList.contains("active")) {
@@ -155,4 +155,13 @@ document.addEventListener("DOMContentLoaded", () => {
         renderExperiments(filtered)
     }
 
+    function generateArticle(exp) {
+        return `
+        ${exp.title}    
+        Eksperimen ini membahas:
+        ${exp.description}    
+        Hasil pengujian menunjukkan bahwa produk ini memiliki performa yang ${exp.category === "battery" ? "perlu diuji lebih lanjut" : "cukup menarik untuk digunakan"}.   
+        Simak video lengkap di atas untuk melihat hasil real test.
+        `
+    }
 })

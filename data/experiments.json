@@ -9,7 +9,7 @@
             "power bank murah",
             "test power bank"
         ],
-        "video": "https://www.youtube.com/embed/O7HR2vCqnKE",
+        "video": "https://www.youtube.com/embed/ycja-lmpoN0",
         "image": "experiments/images/powerbank.png",
         "category": "battery",
         "featured": true,
@@ -27,10 +27,10 @@
             "electronics teardown",
             "charger test"
         ],
-        "video": "https://www.youtube.com/embed/xyz456ABC",
+        "video": "https://www.youtube.com/embed/kLS5Cg_yNdM",
         "image": "experiments/images/charger.png",
         "category": "charger",
-        "featured": false,
+        "featured": true,
         "date": "2026-03-17"
     },
     {

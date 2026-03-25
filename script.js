@@ -95,6 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
             container.appendChild(card);
         });
+
+        card.style.cursor = "pointer";
+
+        card.addEventListener("click", () => {
+            window.location.href = `article.html?id=${exp.id}`;
+        });
     }
 
     const searchInput = document.getElementById("searchInput");

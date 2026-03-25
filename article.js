@@ -7,6 +7,11 @@ async function loadArticle() {
 
     const exp = data.find((e) => e.id === id);
 
+    if (!exp) {
+        document.body.innerHTML = "<h1>Experiment not found</h1>";
+        return;
+    }
+
     document.getElementById("title").innerText = exp.title;
 
     document.getElementById("content").innerText =
@@ -18,7 +23,7 @@ async function loadArticle() {
     document.title = exp.title;
 
     document.getElementById("metaDesc").setAttribute("content", exp.description);
-    document.getElementById("metaKeywords").setAttribute("content", exp.keywords);
+    document.getElementById("metaKeywords").setAttribute("content", exp.keywords.join(", "));
 
     document.getElementById("ogTitle").setAttribute("content", exp.title);
     document.getElementById("ogDesc").setAttribute("content", exp.description);
@@ -65,3 +70,7 @@ function generateArticle(exp) {
 }
 
 loadArticle();
+
+if (!exp.video) {
+    document.getElementById("video").innerHTML = "<p>No video available</p>";
+}

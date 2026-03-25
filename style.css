@@ -30,7 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: #02061798;
+  background: rgba(0, 0, 0, 0) 60%;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -535,3 +535,25 @@ section {
 #related a:hover {
   text-decoration: underline;
 }
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUpCard 0.5s ease forwards;
+}
+
+@keyframes fadeUpCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
